@@ -17,7 +17,6 @@ class SolutionTest {
     @MethodSource("validSequenceCases")
     void validSequence(String word1, String word2, int[] expected) {
         assertArrayEquals(expected, solution.validSequence(word1, word2));
-
     }
 
     private static Stream<Arguments> validSequenceCases() {
