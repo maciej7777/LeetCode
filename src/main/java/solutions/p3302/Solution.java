@@ -1,4 +1,4 @@
-package main.java.solutions.p3302;
+package solutions.p3302;
 
 public class Solution {
     public int[] validSequence(String word1, String word2) {
