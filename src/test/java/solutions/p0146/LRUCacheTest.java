@@ -15,7 +15,7 @@ class LRUCacheTest {
      * [null,null,null,1,null,-1,null,-1,3,4]
      */
     @Test
-    public void testLRUCacheWithLeetcodeScenario() {
+    public void shouldPassLeetCodeExample() {
         LRUCache lRUCache = new LRUCache(2);
         lRUCache.put(1, 1);
         lRUCache.put(2, 2);
