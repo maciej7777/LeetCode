@@ -3,7 +3,7 @@ package solutions.p0146;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
-public class LRUCache {
+public class LRUCacheLinkedHashMap {
 
     private static class LRUHashMap<K, V> extends LinkedHashMap<K, V> {
         private final int capacity;
@@ -21,7 +21,7 @@ public class LRUCache {
 
     private final LRUHashMap<Integer, Integer> cache;
 
-    public LRUCache(int capacity) {
+    public LRUCacheLinkedHashMap(int capacity) {
         cache = new LRUHashMap<>(capacity);
     }
 

@@ -4,7 +4,7 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class LRUCacheTest {
+class LRUCacheLinkedHashMapTest {
     /**
      * Input
      * ["LRUCache","put","put","get","put","get","put","get","get","get"]
@@ -16,7 +16,7 @@ class LRUCacheTest {
      */
     @Test
     public void shouldPassLeetCodeExample() {
-        LRUCache lRUCache = new LRUCache(2);
+        LRUCacheLinkedHashMap lRUCache = new LRUCacheLinkedHashMap(2);
         lRUCache.put(1, 1);
         lRUCache.put(2, 2);
         assertEquals(1, lRUCache.get(1));
@@ -32,7 +32,7 @@ class LRUCacheTest {
 
     @Test
     public void shouldReturnMinusOneForMissingElement() {
-        LRUCache lRUCache = new LRUCache(1);
+        LRUCacheLinkedHashMap lRUCache = new LRUCacheLinkedHashMap(1);
         lRUCache.put(1, 1);
         lRUCache.put(2, 2);
         assertEquals(2, lRUCache.get(2));
@@ -41,7 +41,7 @@ class LRUCacheTest {
 
     @Test
     public void shouldForgetLeastRecentElement() {
-        LRUCache lRUCache = new LRUCache(2);
+        LRUCacheLinkedHashMap lRUCache = new LRUCacheLinkedHashMap(2);
         lRUCache.put(1, 1);
         lRUCache.put(2, 2);
         assertEquals(1, lRUCache.get(1));
