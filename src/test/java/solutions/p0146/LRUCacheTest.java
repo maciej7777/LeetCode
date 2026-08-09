@@ -29,4 +29,23 @@ class LRUCacheTest {
         assertEquals(3, lRUCache.get(3));
         assertEquals(4, lRUCache.get(4));
     }
+
+    @Test
+    public void shouldReturnMinusOneForMissingElement() {
+        LRUCache lRUCache = new LRUCache(1);
+        lRUCache.put(1, 1);
+        lRUCache.put(2, 2);
+        assertEquals(2, lRUCache.get(2));
+        assertEquals(-1, lRUCache.get(1));
+    }
+
+    @Test
+    public void shouldForgetLeastRecentElement() {
+        LRUCache lRUCache = new LRUCache(2);
+        lRUCache.put(1, 1);
+        lRUCache.put(2, 2);
+        assertEquals(1, lRUCache.get(1));
+        lRUCache.put(3, 3);
+        assertEquals(-1, lRUCache.get(2));
+    }
 }
